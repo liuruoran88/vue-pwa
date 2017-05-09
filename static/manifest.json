@@ -1,0 +1,25 @@
+{
+  "name": "vue-pwa",
+  "short_name": "新闻",
+  "icons": [
+      {
+          "src": "/static/img/icons/webapp-news-logo2_142x142.png",
+          "sizes": "142x142",
+          "type": "image/png"
+      },
+      {
+          "src": "/static/img/icons/webapp-news-logo2_196x196.png",
+          "sizes": "196x196",
+          "type": "image/png"
+      },
+      {
+          "src": "/static/img/icons/webapp-news-logo2_300x300.png",
+          "sizes": "300x300",
+          "type": "image/png"
+      }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#4DBA87"
+}

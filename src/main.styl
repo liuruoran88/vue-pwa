@@ -1,0 +1,71 @@
+rem(size)
+    (size / 16)rem
+
+
+body,li,ul,a
+    padding 0
+    margin 0
+    list-style none
+    text-decoration none
+    a
+        color #444
+
+#header
+    position fixed
+    top 0
+    left 0
+    height rem(50)
+    width 100%
+    font-size rem(16)
+    .top-bar
+        height rem(50)
+        background #3e98f0 url(../static/img/icons/bg-news-logo-head.png) no-repeat center center
+        background-size 30%
+        text-align center
+        border-bottom solid 1px #fff
+
+    .top-nav
+        height rem(40)
+        text-align center
+        background #3e98f0
+        ul
+            width 100%
+            display flex
+            white-space nowrap
+            li
+                flex 1
+                line-height rem(40)
+                height rem(40)
+                display inline-block
+                overflow-x scroll
+                overflow-y hidden
+                color #ccc
+
+                &.active
+                    color #fff
+                    box-sizing border-box
+                    -moz-box-sizing border-box
+                    -webkit-box-sizing border-box
+                    border-bottom solid 2px #fff
+                    a
+                        color #fff
+
+#app
+    padding-top rem(90)
+    min-height rem(400)
+    padding-bottom rem(90)
+    .app-content
+        min-height rem(400)
+        // background url('./assets/loading.gif') no-repeat no-repeat center center
+        // background-size 15%
+        .content-view
+            background #fff
+
+#footer
+    width 100%
+    height rem(50)
+    text-align center
+    background #3e98f0
+    position fixed
+    bottom 0
+    left 0
