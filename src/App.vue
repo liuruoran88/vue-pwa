@@ -5,7 +5,7 @@
             <div class="top-nav">
                 <ul>
                     <li @click="toggle(index ,tab.view)" v-for="(tab,index) in tabs" :class="{active:active===index}">
-                          <a :href="'#/'+tab.view">{{tab.type}}</a>
+                        <a :href="'#/'+tab.view">{{tab.type}}</a>
                     </li>
                 </ul>
             </div>
@@ -13,7 +13,7 @@
 
         <div class="app-content">
             <transition name="display" node="out-in">
-              <router-view class="content-view"></router-view>
+                <router-view class="content-view"></router-view>
             </transition>
         </div>
 
@@ -56,11 +56,10 @@ export default {
     methods: {
         toggle(i, v){
             this.active = i
-            // this.currentView = v
         },
         tabHref() {
             this.tabs.map(item => {
-                item.href = '#/' + item.view;
+                item.href = '#/' + item.view
             })
         }
     },
@@ -69,12 +68,11 @@ export default {
         'Detail': Detail
     },
     ready() {
-      // this.tabHref();
     }
 }
 </script>
 
 
 <style lang="stylus">
-  @require './main.styl'
+    @require './main.styl'
 </style>

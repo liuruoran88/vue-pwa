@@ -20,7 +20,7 @@ export default {
         }
     },
     async created () {
-        let me = this;
+        let me = this
         await axios('/api/detail', {
             params: {}
         }).then(function (data) {
