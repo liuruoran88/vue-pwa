@@ -1,18 +1,11 @@
 var filesToCache = [
     '/',
     '/index.html',
-    '/__webpack_hmr',
     '/favicon.ico',
     '/app.js',
     '/0.js',
     '/1.js',
-    '/api/news',
-    '/api/detail',
-    '/static/manifest.json',
-    '/static/css/app.css',
-    '/static/js/app.js',
-    '/static/js/0.js',
-    '/static/js/1.js'
+    '/static/manifest.json'
 ];
 var dataCacheName = 'newsData-v1';
 var cacheName = 'newsPWA-final-1';
@@ -51,8 +44,8 @@ self.addEventListener('fetch', function(e) {
             caches.open(dataCacheName).then(function (cache) {
                 return fetch(e.request).then(function (response){
                     cache.put(e.request.url, response.clone());
-                    return response;})
-                .catch(function (err) {
+                    return response;
+                }).catch(function (err) {
                     return caches.match(e.request).then(function (response) {
                         return response;
                     });
@@ -66,6 +59,10 @@ self.addEventListener('fetch', function(e) {
                 return fetch(e.request).then(function (response){
                     cache.put(e.request.url, response.clone());
                     return response;
+                }).catch(function (err) {
+                    return caches.match(e.request).then(function (response) {
+                        return response;
+                    });
                 });
             })
         );
