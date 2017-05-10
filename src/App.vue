@@ -56,11 +56,6 @@ export default {
     methods: {
         toggle(i, v){
             this.active = i
-        },
-        tabHref() {
-            this.tabs.map(item => {
-                item.href = '#/' + item.view
-            })
         }
     },
     components: {
