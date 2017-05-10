@@ -4,9 +4,11 @@
             <div class="top-bar"></div>
             <div class="top-nav">
                 <ul>
-                    <li @click="toggle(index ,tab.view)" v-for="(tab,index) in tabs" :class="{active:active===index}">
-                        <a :href="'#/'+tab.view">{{tab.type}}</a>
-                    </li>
+                    <!-- <li @click="toggle(index ,tab.view)" v-for="(tab,index) in tabs" :class="{active:active===index}">
+                        <li><router-link :to="{tab.view}">{{tab.type}}</router-link></li>
+                    </li> -->
+                    <router-link tag="li" to="/hello">热点1</router-link>
+                    <router-link tag="li" to="/detail">热点2</router-link>
                 </ul>
             </div>
         </div>
@@ -41,23 +43,15 @@ export default {
                 {
                     type: 'tab2',
                     view: 'detail'
-                },
-                {
-                    type: 'tab3',
-                    view: 'hello'
-                },
-                {
-                    type: 'tab4',
-                    view: 'detail'
                 }
             ]
         };
     },
-    methods: {
-        toggle(i, v){
-            this.active = i
-        }
-    },
+    // methods: {
+        // toggle(i, v){
+        //     this.active = i
+        // }
+    // },
     components: {
         'Hello': Hello,
         'Detail': Detail
