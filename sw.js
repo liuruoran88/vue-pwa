@@ -9,8 +9,6 @@ var filesToCache = [
 ];
 var dataCacheName = 'newsData-v1';
 var cacheName = 'newsPWA-final-1';
-require('http').globalAgent.maxSockets = Infinity;
-require('https').globalAgent.maxSockets = Infinity;
 
 self.addEventListener('install', function (e) {
     console.log('[ServiceWorker] Install');
