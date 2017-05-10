@@ -4,8 +4,8 @@
             <div class="top-bar"></div>
             <div class="top-nav">
                 <ul>
-                    <!-- <li @click="toggle(index ,tab.view)" v-for="(tab,index) in tabs" :class="{active:active===index}">
-                        <li><router-link :to="{tab.view}">{{tab.type}}</router-link></li>
+                   <!--  <li @click="toggle(index ,tab.view)" v-for="(tab,index) in tabs" :class="{active:active===index}">
+                        <a :href="'/'+tab.view">{{tab.type}}</router-link>
                     </li> -->
                     <router-link tag="li" to="/hello">热点1</router-link>
                     <router-link tag="li" to="/detail">热点2</router-link>
@@ -37,11 +37,11 @@ export default {
             currentView: 'hello',
             tabs: [
                 {
-                    type: 'tab1',
+                    type: '热点1',
                     view: 'hello'
                 },
                 {
-                    type: 'tab2',
+                    type: '热点2',
                     view: 'detail'
                 }
             ]

@@ -13,7 +13,23 @@ module.exports = function (params) {
                         "ts": "1494204073000",
                         "title": "1北京楼市三次定向加息 90平首套房平均成本增45万",
                         "url": "http://bj.house.163.com/17/0508/08/CJTBLR8K000788HN.html",
-                        "imageurls": [],
+                        "imageurls": [
+                            {
+                                "url": "https://t10.baidu.com/it/u=1205736504,1921644791&fm=170&s=7AF215C54662551D9335B95903004091&w=218&h=146&img.JPEG",
+                                "height": 146,
+                                "width": 218
+                            },
+                            {
+                                "url": "https://t11.baidu.com/it/u=1212700219,1829066302&fm=170&s=E29016C747B1A6730C750D070300F043&w=218&h=146&img.JPEG",
+                                "height": 146,
+                                "width": 218
+                            },
+                            {
+                                "url": "https://t12.baidu.com/it/u=1252244075,1864604173&fm=170&s=AC548A4E58638F1FF604503303005012&w=218&h=146&img.JPEG",
+                                "height": 146,
+                                "width": 218
+                            }
+                        ],
                         "site": "网易新闻",
                         "type": "text",
                         "abs": "若按照基准利率4.9%打8.5折，最高贷款期限25年等额本息计算，还款总额是593.14万元，...",
