@@ -4,11 +4,8 @@
             <div class="top-bar"></div>
             <div class="top-nav">
                 <ul>
-                   <!--  <li @click="toggle(index ,tab.view)" v-for="(tab,index) in tabs" :class="{active:active===index}">
-                        <a :href="'/'+tab.view">{{tab.type}}</router-link>
-                    </li> -->
-                    <router-link tag="li" to="/hello">热点1</router-link>
-                    <router-link tag="li" to="/detail">热点2</router-link>
+                    <router-link tag="li" to="/" exact><a>热点1</a></router-link>
+                    <router-link tag="li" to="/detail" exact><a>热点2</a></router-link>
                 </ul>
             </div>
         </div>
@@ -32,26 +29,8 @@ const Detail = resolve => require(['@/components/Detail'], resolve)
 export default {
     name: 'app',
     data() {
-        return {
-            active: 0,
-            currentView: 'hello',
-            tabs: [
-                {
-                    type: '热点1',
-                    view: 'hello'
-                },
-                {
-                    type: '热点2',
-                    view: 'detail'
-                }
-            ]
-        };
+        return {}
     },
-    // methods: {
-        // toggle(i, v){
-        //     this.active = i
-        // }
-    // },
     components: {
         'Hello': Hello,
         'Detail': Detail

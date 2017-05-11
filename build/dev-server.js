@@ -65,7 +65,6 @@ app.use(hotMiddleware)
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
-// app.use(staticPath, express.static('./'))
 
 app.get('/sw.js', function (req, res) {
   res.sendFile(path.join(__dirname, '../sw.js'));

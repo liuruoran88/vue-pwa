@@ -11,8 +11,8 @@
                         </span>
                     </div>
                     <div class="some-icons">
-                        <span class="update-time">刚刚</span>
-                        <span class="icons">热点</span>
+                        <span class="update-time">{{news.show}}</span>
+                        <span class="icons">{{news.site}}</span>
                     </div>
                 </a>
             </div>
@@ -29,19 +29,26 @@ export default {
             newsList: []
         }
     },
-    // methods: {
-    //     processData(data) {
-    //         return data
-    //     }
-    // },
+    methods: {
+        // 做一些数据处理，并赋值
+        processData(data) {
+            data.map(item => {
+                let time = new Date(Number(item.ts) || Date.now())
+                item.show = time.getFullYear() + '-' + time.getMonth() + '-'
+                    + time.getDay() + ' ' + time.getHours() + ':'
+                    + time.getMinutes()
+            })
+            this.newsList = data
+        }
+    },
     async created () {
         let me = this
         await axios('/api/news', {
             params: {}
         }).then(function (data) {
             if (data && data.data && data.data.data && data.data.data.news) {
-                me.newsList = data.data.data.news
-                // me.newsList = me.processData(data.data.data.news)
+                // 处理数据
+                me.processData(data.data.data.news)
             }
         })
     }
